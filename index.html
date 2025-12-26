@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Receipt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- FORM -->
+        <div class="card">
+            <h1>Payment Receipt</h1>
+            <p class="subtitle">Generate professional invoices</p>
+
+            <form id="receiptForm">
+                <label>Customer Name</label>
+                <input type="text" id="name" required>
+
+                <label>Customer Address</label>
+                <textarea id="address" rows="3" required></textarea>
+
+                <label>Amount</label>
+                <input type="number" id="amount" required>
+
+                <label>Payment Method</label>
+                <select id="method">
+                    <option>Cash</option>
+                    <option>Card</option>
+                    <option>UPI</option>
+                    <option>Bank Transfer</option>
+                </select>
+
+                <button type="submit">Generate Invoice</button>
+            </form>
+            <p style="margin-top:15px;">
+                <a href="receipts.html">📂 View Saved Receipts</a>
+            </p>
+
+        </div>
+
+        <!-- RECEIPT -->
+        <div class="card receipt" id="receipt">
+            <div class="receipt-header">
+                <img src="img/slogo.png" alt="Safachatt PG" class="logo-img">
+                <h2>Safachatt PG For Girls</h2>
+                <p>Discover the Magic of Sisterhood in Our Girls’ PG</p>
+            </div>
+
+            <div class="receipt-meta">
+                <div>
+                    <strong>Invoice#</strong><br>
+                    <span id="invoiceNo"></span>
+                </div>
+                <div style="text-align:right;">
+                    <strong>Date</strong><br>
+                    <span id="invoiceDate"></span>
+                </div>
+            </div>
+
+            <div class="invoice-to">
+                <strong>Invoice To:</strong>
+                <p>
+                    <span id="custName"></span><br>
+                    <span id="custAddress"></span>
+                </p>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th style="text-align:right;">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PG Fee</td>
+                        <td style="text-align:right;">₹<span id="totalAmount">0</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="total">
+                <span>Total</span>
+                <span>₹<span id="finalAmount">0</span></span>
+            </div>
+
+            <p class="method">
+                <strong>Payment Method:</strong> <span id="payMethod"></span>
+            </p>
+
+            <div class="bank">
+                <strong>Bank of Baroda</strong><br>
+                A/C: 1856011500048744<br>
+                IFSC: BARB0TRDGHAG<br>
+                Name: Jyoti Singh
+            </div>
+            <div class="sign"><b><i>Safachatt Group</i></b></div>
+            <div class="sign">Authorized Sign</div>
+
+            <div class="footer">
+                <p>📞 9625290733</p>
+                <p>C8/17 Block C Govind Puram, Ghaziabad</p>
+                <p>📧 mjsafachatgroup@gmail.com</p>
+            </div>
+
+            <div class="actions">
+                <button onclick="window.print()">Print</button>
+                <button onclick="downloadPDF()">Download PDF</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

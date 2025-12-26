@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Saved Receipts</title>
+    <link rel="stylesheet" href="receipts.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Saved Receipts</h1>
+        <p class="subtitle">All generated invoices</p>
+
+        <!-- Clear button -->
+        <button id="clearAll" class="danger">🗑 Clear All Receipts</button>
+
+        <table id="receiptTable">
+            <thead>
+                <tr>
+                    <th>Invoice #</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Payment</th>
+                </tr>
+            </thead>
+            <tbody id="list"></tbody>
+        </table>
+
+        <p id="empty" class="empty">No receipts saved yet.</p>
+
+        <a href="index.html" class="back">← Back to Invoice</a>
+    </div>
+
+    <script src="receipts.js"></script>
+</body>
+
+</html>

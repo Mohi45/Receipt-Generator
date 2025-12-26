@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #5f6cff, #7b5cff);
+}
+
+/* LAYOUT */
+.app {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* CARD */
+.card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+}
+
+/* FORM */
+.subtitle {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    margin-top: 14px;
+    display: block;
+    font-weight: 600;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 18px;
+    width: 100%;
+    padding: 13px;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(135deg, #5f6cff, #7b5cff);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* RECEIPT */
+.receipt {
+    max-width: 420px;
+    margin: auto;
+    padding: 30px 28px;
+    border-radius: 22px;
+    background: linear-gradient(#ffffff, #f9f9ff);
+}
+
+/* HEADER */
+.receipt-header {
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px dashed #ddd;
+}
+
+.receipt-header h2 {
+    margin: 0;
+    color: #5f6cff;
+}
+
+.receipt-header p {
+    font-size: 13px;
+    color: #777;
+}
+
+/* META */
+.receipt-meta {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.invoice-to {
+    background: #f3f5ff;
+    border-radius: 12px;
+    font-size: 14px;
+    margin-bottom: 2px;
+    text-align: left;
+    /* FORCE LEFT */
+}
+
+.invoice-to strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #5f6cff;
+    font-weight: 600;
+}
+
+.invoice-to p {
+    margin: 2;
+    padding: 0;
+    line-height: 1.2;
+    /* tighter spacing */
+    text-align: left;
+    word-break: break-word;
+}
+
+.invoice-to p span {
+    display: block;
+    margin: 0;
+    /* remove extra gap */
+    padding: 0;
+}
+
+.receipt {
+    max-width: 420px;
+    /* keeps it compact */
+    font-size: 13px;
+    /* prevents overflow */
+}
+
+
+.receipt.show {
+    visibility: visible;
+    position: static;
+}
+
+
+.invoice-to p span:first-child {
+    font-weight: 600;
+    /* NAME BOLD */
+}
+
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 18px;
+}
+
+th {
+    background: #5f6cff;
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+td:last-child,
+th:last-child {
+    text-align: right;
+}
+
+/* TOTAL */
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    background: #f3f5ff;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* METHOD */
+.method {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* BANK */
+.bank {
+    font-size: 14px;
+    background: #fafafa;
+    padding: 12px;
+    border-radius: 12px;
+    border-left: 4px solid #5f6cff;
+    margin-bottom: 30px;
+}
+
+/* SIGNATURE */
+.sign {
+    text-align: right;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    border-top: 1px dashed #ccc;
+    padding-top: 12px;
+    margin-bottom: 15px;
+}
+
+/* ACTIONS */
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+.actions button {
+    flex: 1;
+    background: linear-gradient(135deg, #5f6cff, #7b5cff);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+.site-header {
+    padding: 15px 30px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo */
+.logo-img {
+    max-width: 100px;
+    /* Desktop size */
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .logo-img {
+        max-width: 120px;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .app {
+        grid-template-columns: 1fr;
+    }
+}
