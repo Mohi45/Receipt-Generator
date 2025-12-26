@@ -13,25 +13,23 @@
         <h1>Saved Receipts</h1>
         <p class="subtitle">All generated invoices</p>
 
-        <!-- Clear button -->
         <button id="clearAll" class="danger">🗑 Clear All Receipts</button>
 
-        <table id="receiptTable">
+        <table>
             <thead>
                 <tr>
-                    <th>Invoice #</th>
+                    <th>Invoice</th>
                     <th>Name</th>
                     <th>Amount</th>
                     <th>Date</th>
-                    <th>Payment</th>
+                    <th>Method</th>
                 </tr>
             </thead>
             <tbody id="list"></tbody>
         </table>
 
         <p id="empty" class="empty">No receipts saved yet.</p>
-
-        <a href="index.html" class="back">← Back to Invoice</a>
+        <a href="index.html" class="back">← Back</a>
     </div>
 
     <script src="receipts.js"></script>
